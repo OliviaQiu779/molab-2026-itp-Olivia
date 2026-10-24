@@ -1,5 +1,5 @@
 //Core Image CIFilter Source: https://developer.apple.com/documentation/coreimage/cifilter-swift.class
-//Codex Prompt: Use ARKit to detect blinks and Core Image’s CIGaussianBlur filter to blur the live camera feed. Each blink increases the blur intensity, up to a maximum radius of 35. Count each blink only once, and allow a new blink after the eyes reopen. When the user stops blinking, gradually reduce the blur by one level every 0.5 seconds until the image is clear.
+//A SwiftUI iOS app that uses ARKit face blend shapes to detect a complete two-eye blink and add Core Image Gaussian blur to the front-camera preview. Each complete blink adds a layer of Gaussian blur. Blur strength fades continuously; blur fades at about 2 layers per second (one layer every 0.5 seconds), with a seven-layer cap.
 
 import ARKit
 import CoreImage
